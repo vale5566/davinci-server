@@ -28,6 +28,4 @@ LANG=de_DE.UTF-8 sed -i '1,3d' /var/www/virtual/valeapps/valeapps.de/davinci/nac
 
 LANG=de_DE.UTF-8 sed -i 's/$/<br>/' /var/www/virtual/valeapps/valeapps.de/davinci/nachrichten.txt
 
-date
-
-node /home/valeapps/plans/app.js
+node /home/valeapps/plans/app_test.js

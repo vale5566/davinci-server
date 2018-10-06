@@ -35,23 +35,23 @@ for (var i = 0; i < allClasses.length; i++) {
         foundedTerm = foundedTerm.replace(/ ; /gi, "");
 
         console.log(foundedTerm);
-        var payload = {
-            notification: {
-                body: foundedTerm,
-                sound: "default"
-            }
+        var message = {
+            android: {
+                priority: "high",
+                ttl: 60 * 60 * 24,
+		notification: {
+			body: foundedTerm,
+                	sound: "default"
+		}
+            },
+	    topic: termThatIsNowSearched
         };
 
-        var options = {
-            priority: "high",
-            timeToLive: 60 * 60 * 24
-        };
-
-        admin.messaging().sendToTopic(termThatIsNowSearched, payload, options).then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-            console.log(error);
-        });
+        //admin.messaging().send(message).then((response) => {
+        //    console.log(response);
+        //}).catch((error) => {
+        //    console.log(error);
+        //});
     }
 }
 fs.createReadStream('/var/www/virtual/valeapps/valeapps.de/davinci/vertretung.html').pipe(fs.createWriteStream('/home/valeapps/plans/vertretung.html'));
@@ -105,6 +105,7 @@ function createArrayWithAllClasses(array) {
     array.push("9.2");
     array.push("9.3");
     array.push("9.4");
+    array.push("9.5");
     array.push("10.1");
     array.push("10.2");
     array.push("10.3");
