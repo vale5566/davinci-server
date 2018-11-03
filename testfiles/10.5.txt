@@ -1,1 +1,1 @@
-  10.5 8 - 9  10.1, 10.2, 10.3, 10.4, 10.5  SN   Hir →Rap  1.30  10SN_Hir  Vertretung  
+  10.5 1 - 2  10.5   RE →LE   Dev →Weg   1.01 →1.27  10.5RE_Dev  Betreuung  
